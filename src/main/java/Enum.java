@@ -1,4 +1,4 @@
-enum EnumColour {
+enum Enum {
     W, /* White */
     B, /* Blue */
     Y, /* Yellow */
