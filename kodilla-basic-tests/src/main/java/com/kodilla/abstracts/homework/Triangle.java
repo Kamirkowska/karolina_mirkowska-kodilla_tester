@@ -1,20 +1,25 @@
 package com.kodilla.abstracts.homework;
 
 public class Triangle extends Shape {
+    private double a;
+    private double b;
+    private double c;
+    private double h;
 
-    public Triangle() {
-        super(4,8,5,0,6);
+    public Triangle(double a, double b, double c, double h) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.h = h;
     }
 
     @Override
-    public void getPerimeter() {
-        this.perimeter = a + b + c;
-        System.out.println("Perimeter of triangle is " + perimeter);
+    public double getPerimeter() {
+        return (a+b+c);
     }
 
     @Override
-    public void getArea() {
-        this.area = a * h / 2;
-        System.out.println("Area of triangle is " + area);
+    public double getArea() {
+        return (a*h/2);
     }
 }

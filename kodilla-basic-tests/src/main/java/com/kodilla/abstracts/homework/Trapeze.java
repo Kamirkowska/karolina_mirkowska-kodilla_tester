@@ -2,19 +2,27 @@ package com.kodilla.abstracts.homework;
 
 public class Trapeze extends Shape {
 
-    public Trapeze() {
-        super(4,8,5,5,6);
+    private double a;
+    private double b;
+    private double c;
+    private double d;
+    private double h;
+
+    public Trapeze(double a, double b, double c, double d, double h) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.h = h;
     }
 
     @Override
-    public void getPerimeter() {
-        this.perimeter = a + b + c + d;
-        System.out.println("Perimeter of trapeze is " + perimeter);
+    public double getPerimeter() {
+        return (a+b+c+d);
     }
 
     @Override
-    public void getArea() {
-        this.area = (a + b)*h / 2;
-        System.out.println("Area of trapeze is " + area);
+    public double getArea() {
+        return ((a+b)*h/2);
     }
 }

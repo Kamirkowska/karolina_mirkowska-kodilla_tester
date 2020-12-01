@@ -1,20 +1,21 @@
 package com.kodilla.abstracts.homework;
 
 public class Rectangle extends Shape {
-    public Rectangle() {
-        super(4, 8, 0,0,8);
+    private double a;
+    private double b;
+
+    public Rectangle(double a, double b) {
+        this.a = a;
+        this.b = b;
     }
 
     @Override
-    public void getPerimeter() {
-        this.perimeter = 2*a + 2*b;
-        System.out.println("Perimeter of rectangle is " + perimeter);
-
+    public double getPerimeter() {
+        return (2*a + 2*b);
     }
 
     @Override
-    public void getArea() {
-        this.area = a * b;
-        System.out.println("Area of rectangle is " + area);
+    public double getArea() {
+        return (a*b);
     }
 }
