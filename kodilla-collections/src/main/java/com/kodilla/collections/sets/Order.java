@@ -25,17 +25,17 @@ public class Order {
         return quantity;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Order order = (Order) o;
-        return Double.compare(order.quantity, quantity) == 0 &&
-                Objects.equals(orderNumber, order.orderNumber) &&
-                Objects.equals(productName, order.productName);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o)
+//            return true;
+//        if (o == null || getClass() != o.getClass())
+//            return false;
+//        Order order = (Order) o;
+//        return Double.compare(order.quantity, quantity) == 0 &&
+//                Objects.equals(orderNumber, order.orderNumber) &&
+//                Objects.equals(productName, order.productName);
+//    }
 
     @Override
     public int hashCode() {

@@ -20,6 +20,7 @@ public class CarsListApplication {
 
         cars.remove(0);
         cars.remove(ford);
+        cars.remove(new Opel(50));
 
         System.out.println(cars.size());
         for (Car car : cars) {

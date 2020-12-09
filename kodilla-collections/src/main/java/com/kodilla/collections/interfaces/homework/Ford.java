@@ -1,6 +1,6 @@
 package com.kodilla.collections.interfaces.homework;
 
-public class Ford implements Car {
+public class Ford implements Car, CarRadio {
     private int speed;
 
     public Ford(int speed) {
@@ -22,5 +22,10 @@ public class Ford implements Car {
     public void decreaseSpeed() {
         this.speed-= 40;
         System.out.println("Ford decreases to: " + speed);
+    }
+
+    @Override
+    public String radioName() {
+        return null;
     }
 }
