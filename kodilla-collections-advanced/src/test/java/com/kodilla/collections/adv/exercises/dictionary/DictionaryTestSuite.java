@@ -10,8 +10,8 @@ class DictionaryTestSuite {
 
     @Test
     public void testAddWord() {
-        Dictionary dictionary = new Dictionary();
 
+        Dictionary dictionary = new Dictionary();
         dictionary.addWord("stos", new EnglishWord(PartOfSpeech.NOUN, "stack"));
         dictionary.addWord("gra", new EnglishWord(PartOfSpeech.NOUN, "play"));
         dictionary.addWord("gra", new EnglishWord(PartOfSpeech.NOUN, "game"));
@@ -19,6 +19,10 @@ class DictionaryTestSuite {
 
         List<EnglishWord> result = dictionary.findEnglishWords("gra");
 
-        assertEquals(2, result.size());
+        List<EnglishWord> expectedList = dictionary.findEnglishWords("gra");
+        expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "play"));
+        expectedList.add(new EnglishWord(PartOfSpeech.NOUN, "game"));
+        assertEquals(expectedList, result);
     }
+
 }
