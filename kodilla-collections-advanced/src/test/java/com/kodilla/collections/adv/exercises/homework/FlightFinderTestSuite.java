@@ -16,6 +16,7 @@ class FlightFinderTestSuite {
         List<Flight> result;
 
         result = flightFinder.findFlightsFrom("Warsaw");
+        System.out.println(result.size());
 
         List<Flight> expectedList = new ArrayList<>();
         expectedList.add(new Flight("Warsaw", "Dublin"));

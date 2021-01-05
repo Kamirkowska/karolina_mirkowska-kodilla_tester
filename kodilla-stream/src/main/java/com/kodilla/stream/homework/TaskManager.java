@@ -16,7 +16,11 @@ public class TaskManager {
                 .filter(t -> t.getDeadline().isAfter(currentDate))
                 .map(TaskManager::getTaskName)
                 .collect(Collectors.toList());
-        System.out.println(tasks);
+
+        for (int i = 0; i<tasks.size(); i++) {
+            System.out.println(TaskRepository.getTasks().get(i).getName() + " " +
+            TaskRepository.getTasks().get(i).getDeadline());
+        }
 
         List<LocalDate> deadlines = TaskRepository.getTasks()
                 .stream()
