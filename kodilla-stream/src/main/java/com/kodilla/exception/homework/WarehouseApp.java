@@ -1,7 +1,7 @@
 package com.kodilla.exception.homework;
 
 public class WarehouseApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Warehouse warehouse = new Warehouse();
 
         warehouse.addOrder("25");

@@ -11,19 +11,11 @@ public class Warehouse {
         orderList.add(order);
     }
 
-    public Order getOrder(String number) throws OrderDoesntExistException {
+    public Order getOrder(String number) throws Exception {
         return orderList
                 .stream()
                 .filter(o -> o.getNumber().equals(number))
-                .findFirst().orElseThrow(OrderDoesntExistException::new);
-    }
-
-    public static Order getOrderNumber(Order order) {
-        for (Order yourOrderNumber : orderList) {
-            if (yourOrderNumber.getNumber().equals(order.getNumber()))
-                return yourOrderNumber;
-        }
-
-        return null;
+//                .findFirst().orElseThrow(OrderDoesntExistException::new);
+                .findFirst().orElseThrow(()->new Exception("mój błąd"));
     }
 }

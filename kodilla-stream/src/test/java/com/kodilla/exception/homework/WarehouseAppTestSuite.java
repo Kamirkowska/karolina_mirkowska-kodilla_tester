@@ -4,8 +4,8 @@ import org.junit.Test;
 
 public class WarehouseAppTestSuite {
 
-    @Test (expected = OrderDoesntExistException.class)
-    public void testIsOrderExists_withException() throws OrderDoesntExistException {
+    @Test (expected = Exception.class)
+    public void testIsOrderExists_withException() throws Exception {
 
         Warehouse warehouse = new Warehouse();
 
