@@ -10,7 +10,7 @@ class UserValidatorTestSuite {
     private UserValidator userValidator = new UserValidator();
 
     @ParameterizedTest
-    @CsvSource(value = {"Adam19,true", "11,false", "Z--,true", "HaL0_21,true", "Pi,false", "31!?,false"})
+    @CsvSource(value = {"Adam19,true", "11,false", "Z--,true", "HaL0_21,true", " ,false", "31!?,false"})
     public void shouldReturnCorrectUsername(String input, boolean expected) {
         assertEquals(expected, userValidator.validateUsername(input));
     }
